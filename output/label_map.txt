@@ -1,0 +1,1003 @@
+KEEP
+DELETE
+SWAP
+KEEP|. <::::>
+DELETE|. <::::>
+KEEP|,
+DELETE|,
+KEEP|. <::::> he
+DELETE|. <::::> he
+KEEP|. <::::> it
+DELETE|. <::::> it
+KEEP|and
+DELETE|and
+KEEP|the
+DELETE|the
+KEEP|was
+DELETE|was
+KEEP|''
+DELETE|''
+KEEP|. <::::> she
+DELETE|. <::::> she
+KEEP|is
+DELETE|is
+KEEP|. <::::> however
+DELETE|. <::::> however
+KEEP|. <::::> it is
+DELETE|. <::::> it is
+KEEP|. <::::> they
+DELETE|. <::::> they
+KEEP|a
+DELETE|a
+KEEP|in
+DELETE|in
+KEEP|he
+DELETE|he
+KEEP|. <::::> it was
+DELETE|. <::::> it was
+KEEP|. <::::> this
+DELETE|. <::::> this
+KEEP|also
+DELETE|also
+KEEP|-
+DELETE|-
+KEEP|. <::::> the
+DELETE|. <::::> the
+KEEP|. <::::> he was
+DELETE|. <::::> he was
+KEEP|of
+DELETE|of
+KEEP|it
+DELETE|it
+KEEP|. <::::> he is
+DELETE|. <::::> he is
+KEEP|to
+DELETE|to
+KEEP|that
+DELETE|that
+KEEP|were
+DELETE|were
+KEEP|on
+DELETE|on
+KEEP|are
+DELETE|are
+KEEP|with
+DELETE|with
+KEEP|then
+DELETE|then
+KEEP|an
+DELETE|an
+KEEP|)
+DELETE|)
+KEEP|for
+DELETE|for
+KEEP|;
+DELETE|;
+KEEP|as
+DELETE|as
+KEEP|(
+DELETE|(
+KEEP|has
+DELETE|has
+KEEP|she
+DELETE|she
+KEEP|had
+DELETE|had
+KEEP|at
+DELETE|at
+KEEP|they
+DELETE|they
+KEEP|. <::::> this is
+DELETE|. <::::> this is
+KEEP|from
+DELETE|from
+KEEP|. <::::> this was
+DELETE|. <::::> this was
+KEEP|his
+DELETE|his
+KEEP|--
+DELETE|--
+KEEP|but
+DELETE|but
+KEEP|'
+DELETE|'
+KEEP|. <::::> in
+DELETE|. <::::> in
+KEEP|which
+DELETE|which
+KEEP|. <::::> she is
+DELETE|. <::::> she is
+KEEP|. <::::> however ,
+DELETE|. <::::> however ,
+KEEP|'s
+DELETE|'s
+KEEP|by
+DELETE|by
+KEEP|. <::::> there
+DELETE|. <::::> there
+KEEP|its
+DELETE|its
+KEEP|. <::::> she was
+DELETE|. <::::> she was
+KEEP|their
+DELETE|their
+KEEP|. <::::> he also
+DELETE|. <::::> he also
+KEEP|. <::::> these
+DELETE|. <::::> these
+KEEP|. <::::> he played
+DELETE|. <::::> he played
+KEEP|this
+DELETE|this
+KEEP|. <::::> his
+DELETE|. <::::> his
+KEEP|, he
+DELETE|, he
+KEEP|former
+DELETE|former
+KEEP|later
+DELETE|later
+KEEP|became
+DELETE|became
+KEEP|. <::::> but
+DELETE|. <::::> but
+KEEP|. <::::> they are
+DELETE|. <::::> they are
+KEEP|, and
+DELETE|, and
+KEEP|who
+DELETE|who
+KEEP|have
+DELETE|have
+KEEP|. <::::> its
+DELETE|. <::::> its
+KEEP|her
+DELETE|her
+KEEP|. <::::> also
+DELETE|. <::::> also
+KEEP|or
+DELETE|or
+KEEP|:
+DELETE|:
+KEEP|was a
+DELETE|was a
+KEEP|first
+DELETE|first
+KEEP|. <::::> they were
+DELETE|. <::::> they were
+KEEP|plays
+DELETE|plays
+KEEP|both
+DELETE|both
+KEEP|only
+DELETE|only
+KEEP|. <::::> it has
+DELETE|. <::::> it has
+KEEP|will
+DELETE|will
+KEEP|not
+DELETE|not
+KEEP|however ,
+DELETE|however ,
+KEEP|. <::::> it is located
+DELETE|. <::::> it is located
+KEEP|, however ,
+DELETE|, however ,
+KEEP|when
+DELETE|when
+KEEP|where
+DELETE|where
+KEEP|him
+DELETE|him
+KEEP|now
+DELETE|now
+KEEP|one
+DELETE|one
+KEEP|two
+DELETE|two
+KEEP|being
+DELETE|being
+KEEP|while
+DELETE|while
+KEEP|. <::::> a
+DELETE|. <::::> a
+KEEP|during
+DELETE|during
+KEEP|there
+DELETE|there
+KEEP|. <::::> then
+DELETE|. <::::> then
+KEEP|he was
+DELETE|he was
+KEEP|located
+DELETE|located
+KEEP|. <::::> he currently
+DELETE|. <::::> he currently
+KEEP|after
+DELETE|after
+KEEP|, which
+DELETE|, which
+KEEP|it was
+DELETE|it was
+KEEP|. <::::> thus
+DELETE|. <::::> thus
+KEEP|as well as
+DELETE|as well as
+KEEP|<::::>
+DELETE|<::::>
+KEEP|. <::::> although
+DELETE|. <::::> although
+KEEP|has been
+DELETE|has been
+KEEP|currently
+DELETE|currently
+KEEP|including
+DELETE|including
+KEEP|, it
+DELETE|, it
+KEEP|was an
+DELETE|was an
+KEEP|. <::::> later
+DELETE|. <::::> later
+KEEP|called
+DELETE|called
+KEEP|it is
+DELETE|it is
+KEEP|. <::::> in addition
+DELETE|. <::::> in addition
+KEEP|'' . <::::>
+DELETE|'' . <::::>
+KEEP|some
+DELETE|some
+KEEP|. <::::> therefore
+DELETE|. <::::> therefore
+KEEP|into
+DELETE|into
+KEEP|them
+DELETE|them
+KEEP|. <::::> it also
+DELETE|. <::::> it also
+KEEP|other
+DELETE|other
+KEEP|. <::::> it 's
+DELETE|. <::::> it 's
+KEEP|which was
+DELETE|which was
+KEEP|these
+DELETE|these
+KEEP|american
+DELETE|american
+KEEP|and was
+DELETE|and was
+KEEP|. <::::> instead
+DELETE|. <::::> instead
+KEEP|and is
+DELETE|and is
+KEEP|will be
+DELETE|will be
+KEEP|an american
+DELETE|an american
+KEEP|. <::::> the song
+DELETE|. <::::> the song
+KEEP|. <::::> here
+DELETE|. <::::> here
+KEEP|. <::::> and
+DELETE|. <::::> and
+KEEP|new
+DELETE|new
+KEEP|be
+DELETE|be
+KEEP|many
+DELETE|many
+KEEP|. <::::> as a result
+DELETE|. <::::> as a result
+KEEP|. <::::> the film
+DELETE|. <::::> the film
+KEEP|. <::::> he then
+DELETE|. <::::> he then
+KEEP|three
+DELETE|three
+KEEP|to be
+DELETE|to be
+KEEP|professional
+DELETE|professional
+KEEP|all
+DELETE|all
+KEEP|which is
+DELETE|which is
+KEEP|would
+DELETE|would
+KEEP|however
+DELETE|however
+KEEP|. <::::> so
+DELETE|. <::::> so
+KEEP|made
+DELETE|made
+KEEP|. <::::> their
+DELETE|. <::::> their
+KEEP|about
+DELETE|about
+KEEP|used
+DELETE|used
+KEEP|. <::::> he has
+DELETE|. <::::> he has
+KEEP|. <::::> the company
+DELETE|. <::::> the company
+KEEP|can
+DELETE|can
+KEEP|since
+DELETE|since
+KEEP|played
+DELETE|played
+KEEP|. <::::> her
+DELETE|. <::::> her
+KEEP|. <::::> after
+DELETE|. <::::> after
+KEEP|in the
+DELETE|in the
+KEEP|. <::::> that
+DELETE|. <::::> that
+KEEP|may
+DELETE|may
+KEEP|very
+DELETE|very
+KEEP|. <::::> for example
+DELETE|. <::::> for example
+KEEP|include
+DELETE|include
+KEEP|born
+DELETE|born
+KEEP|eventually
+DELETE|eventually
+KEEP|second
+DELETE|second
+KEEP|such as
+DELETE|such as
+KEEP|. <::::> as
+DELETE|. <::::> as
+KEEP|began
+DELETE|began
+KEEP|u.s.
+DELETE|u.s.
+KEEP|! <::::>
+DELETE|! <::::>
+KEEP|brig . <::::> gen.
+DELETE|brig . <::::> gen.
+KEEP|&
+DELETE|&
+KEEP|. <::::> there are
+DELETE|. <::::> there are
+KEEP|of the
+DELETE|of the
+KEEP|. <::::> additionally
+DELETE|. <::::> additionally
+KEEP|between
+DELETE|between
+KEEP|. <::::> she also
+DELETE|. <::::> she also
+KEEP|had been
+DELETE|had been
+KEEP|, but
+DELETE|, but
+KEEP|been
+DELETE|been
+KEEP|named
+DELETE|named
+KEEP|over
+DELETE|over
+KEEP|still
+DELETE|still
+KEEP|. <::::> on
+DELETE|. <::::> on
+KEEP|included
+DELETE|included
+KEEP|. <::::> he had
+DELETE|. <::::> he had
+KEEP|, she
+DELETE|, she
+KEEP|, the
+DELETE|, the
+KEEP|. <::::> he became
+DELETE|. <::::> he became
+KEEP|. <::::> while
+DELETE|. <::::> while
+KEEP|often
+DELETE|often
+KEEP|. <::::> when
+DELETE|. <::::> when
+KEEP|. <::::> these include
+DELETE|. <::::> these include
+KEEP|until
+DELETE|until
+KEEP|through
+DELETE|through
+KEEP|2
+DELETE|2
+KEEP|so
+DELETE|so
+KEEP|. <::::> at
+DELETE|. <::::> at
+KEEP|four
+DELETE|four
+KEEP|current
+DELETE|current
+KEEP|us
+DELETE|us
+KEEP|more
+DELETE|more
+KEEP|. <::::> these are
+DELETE|. <::::> these are
+KEEP|. <::::> he served
+DELETE|. <::::> he served
+KEEP|retired
+DELETE|retired
+KEEP|took
+DELETE|took
+KEEP|united states
+DELETE|united states
+KEEP|. <::::> meanwhile
+DELETE|. <::::> meanwhile
+KEEP|it 's
+DELETE|it 's
+KEEP|. <::::> he is also
+DELETE|. <::::> he is also
+KEEP|several
+DELETE|several
+KEEP|. <::::> the album
+DELETE|. <::::> the album
+KEEP|again
+DELETE|again
+KEEP|) . <::::>
+DELETE|) . <::::>
+KEEP|subsequently
+DELETE|subsequently
+KEEP|one of
+DELETE|one of
+KEEP|have been
+DELETE|have been
+KEEP|even
+DELETE|even
+KEEP|. <::::> unfortunately
+DELETE|. <::::> unfortunately
+KEEP|moved
+DELETE|moved
+KEEP|because
+DELETE|because
+KEEP|. <::::> though
+DELETE|. <::::> though
+KEEP|3
+DELETE|3
+KEEP|served
+DELETE|served
+KEEP|british
+DELETE|british
+KEEP|footballer . <::::> he
+DELETE|footballer . <::::> he
+KEEP|approximately
+DELETE|approximately
+KEEP|. <::::> she is a member of
+DELETE|. <::::> she is a member of
+KEEP|won
+DELETE|won
+KEEP|. <::::> there is
+DELETE|. <::::> there is
+KEEP|. <::::> some
+DELETE|. <::::> some
+KEEP|. <::::> they have
+DELETE|. <::::> they have
+KEEP|five
+DELETE|five
+KEEP|released
+DELETE|released
+KEEP|most
+DELETE|most
+KEEP|just
+DELETE|just
+KEEP|came
+DELETE|came
+KEEP|4
+DELETE|4
+KEEP|women 's international
+DELETE|women 's international
+KEEP|originally
+DELETE|originally
+KEEP|film
+DELETE|film
+KEEP|within
+DELETE|within
+KEEP|, who
+DELETE|, who
+KEEP|. <::::> he is the
+DELETE|. <::::> he is the
+KEEP|is a
+DELETE|is a
+KEEP|. <::::> this includes
+DELETE|. <::::> this includes
+KEEP|. <::::> he was also
+DELETE|. <::::> he was also
+KEEP|due to
+DELETE|due to
+KEEP|received
+DELETE|received
+KEEP|city
+DELETE|city
+KEEP|, they
+DELETE|, they
+KEEP|. <::::> it lies
+DELETE|. <::::> it lies
+KEEP|appeared
+DELETE|appeared
+KEEP|. <::::> the latter
+DELETE|. <::::> the latter
+KEEP|known
+DELETE|known
+KEEP|under
+DELETE|under
+KEEP|therefore
+DELETE|therefore
+KEEP|found
+DELETE|found
+KEEP|. <::::> the school
+DELETE|. <::::> the school
+KEEP|who was
+DELETE|who was
+KEEP|people
+DELETE|people
+KEEP|that was
+DELETE|that was
+KEEP|though
+DELETE|though
+KEEP|1
+DELETE|1
+KEEP|/
+DELETE|/
+KEEP|. <::::> with
+DELETE|. <::::> with
+KEEP|. <::::> they also
+DELETE|. <::::> they also
+KEEP|. <::::> the band
+DELETE|. <::::> the band
+KEEP|started
+DELETE|started
+KEEP|following
+DELETE|following
+KEEP|become
+DELETE|become
+KEEP|before
+DELETE|before
+KEEP|playing
+DELETE|playing
+KEEP|thus
+DELETE|thus
+KEEP|up
+DELETE|up
+KEEP|. <::::> it is also
+DELETE|. <::::> it is also
+KEEP|. <::::> he was the
+DELETE|. <::::> he was the
+KEEP|like
+DELETE|like
+KEEP|who is
+DELETE|who is
+KEEP|held
+DELETE|held
+KEEP|although
+DELETE|although
+KEEP|could
+DELETE|could
+KEEP|early
+DELETE|early
+KEEP|led
+DELETE|led
+KEEP|who is currently a free agent . <::::> he most recently played
+DELETE|who is currently a free agent . <::::> he most recently played
+KEEP|, was
+DELETE|, was
+KEEP|. <::::> during
+DELETE|. <::::> during
+KEEP|. <::::> it is situated
+DELETE|. <::::> it is situated
+KEEP|and the
+DELETE|and the
+KEEP|use
+DELETE|use
+KEEP|said
+DELETE|said
+KEEP|in order
+DELETE|in order
+KEEP|known as
+DELETE|known as
+KEEP|around
+DELETE|around
+KEEP|. <::::> today
+DELETE|. <::::> today
+KEEP|. <::::> nevertheless
+DELETE|. <::::> nevertheless
+KEEP|team
+DELETE|team
+KEEP|usually
+DELETE|usually
+KEEP|state
+DELETE|state
+KEEP|. <::::> furthermore
+DELETE|. <::::> furthermore
+KEEP|based
+DELETE|based
+KEEP|soon
+DELETE|soon
+KEEP|did
+DELETE|did
+KEEP|. <::::> the station
+DELETE|. <::::> the station
+KEEP|. <::::> also ,
+DELETE|. <::::> also ,
+KEEP|near
+DELETE|near
+KEEP|built
+DELETE|built
+KEEP|performed
+DELETE|performed
+KEEP|. <::::> these were
+DELETE|. <::::> these were
+KEEP|n't
+DELETE|n't
+KEEP|another
+DELETE|another
+KEEP|. <::::> he is a
+DELETE|. <::::> he is a
+KEEP|third
+DELETE|third
+KEEP|he is
+DELETE|he is
+KEEP|. <::::> in fact
+DELETE|. <::::> in fact
+KEEP|as a
+DELETE|as a
+KEEP|. <::::> he won
+DELETE|. <::::> he won
+KEEP|an unrestricted free agent . <::::> he most recently played
+DELETE|an unrestricted free agent . <::::> he most recently played
+KEEP|actually
+DELETE|actually
+KEEP|. <::::> currently
+DELETE|. <::::> currently
+KEEP|either
+DELETE|either
+KEEP|back
+DELETE|back
+KEEP|initially
+DELETE|initially
+KEEP|large
+DELETE|large
+KEEP|. <::::> he made
+DELETE|. <::::> he made
+KEEP|, with
+DELETE|, with
+KEEP|along
+DELETE|along
+KEEP|such
+DELETE|such
+KEEP|worked
+DELETE|worked
+KEEP|. <::::> the book
+DELETE|. <::::> the book
+KEEP|went
+DELETE|went
+KEEP|football
+DELETE|football
+KEEP|song
+DELETE|song
+KEEP|10
+DELETE|10
+KEEP|various
+DELETE|various
+KEEP|joined
+DELETE|joined
+KEEP|small
+DELETE|small
+KEEP|. <::::> an
+DELETE|. <::::> an
+KEEP|major
+DELETE|major
+KEEP|. <::::> from
+DELETE|. <::::> from
+KEEP|six
+DELETE|six
+KEEP|she was
+DELETE|she was
+KEEP|. <::::> one
+DELETE|. <::::> one
+KEEP|having
+DELETE|having
+KEEP|. <::::> the show
+DELETE|. <::::> the show
+KEEP|television
+DELETE|television
+KEEP|left
+DELETE|left
+KEEP|featured
+DELETE|featured
+KEEP|includes
+DELETE|includes
+KEEP|established
+DELETE|established
+KEEP|. <::::> eventually
+DELETE|. <::::> eventually
+KEEP|5
+DELETE|5
+KEEP|. <::::> both
+DELETE|. <::::> both
+KEEP|any
+DELETE|any
+KEEP|local
+DELETE|local
+KEEP|national
+DELETE|national
+KEEP|. <::::> for
+DELETE|. <::::> for
+KEEP|previously
+DELETE|previously
+KEEP|died
+DELETE|died
+KEEP|. <::::> he later
+DELETE|. <::::> he later
+KEEP|series
+DELETE|series
+KEEP|that is
+DELETE|that is
+KEEP|original
+DELETE|original
+KEEP|using
+DELETE|using
+KEEP|those
+DELETE|those
+KEEP|university
+DELETE|university
+KEEP|lead
+DELETE|lead
+KEEP|time
+DELETE|time
+KEEP|against
+DELETE|against
+KEEP|opened
+DELETE|opened
+KEEP|founded
+DELETE|founded
+KEEP|school
+DELETE|school
+KEEP|? <::::>
+DELETE|? <::::>
+KEEP|english
+DELETE|english
+KEEP|created
+DELETE|created
+KEEP|returned
+DELETE|returned
+KEEP|recorded
+DELETE|recorded
+KEEP|. <::::> it will be
+DELETE|. <::::> it will be
+KEEP|finally
+DELETE|finally
+KEEP|, a
+DELETE|, a
+KEEP|would be
+DELETE|would be
+KEEP|. <::::> he died
+DELETE|. <::::> he died
+KEEP|served as
+DELETE|served as
+KEEP|'' ,
+DELETE|'' ,
+KEEP|area
+DELETE|area
+KEEP|considered
+DELETE|considered
+KEEP|written
+DELETE|written
+KEEP|. <::::> for example ,
+DELETE|. <::::> for example ,
+KEEP|6
+DELETE|6
+KEEP|features
+DELETE|features
+KEEP|out
+DELETE|out
+KEEP|. <::::> he plays
+DELETE|. <::::> he plays
+KEEP|. <::::> the group
+DELETE|. <::::> the group
+KEEP|. <::::> he is currently
+DELETE|. <::::> he is currently
+KEEP|canadian
+DELETE|canadian
+KEEP|produced
+DELETE|produced
+KEEP|. <::::> many
+DELETE|. <::::> many
+KEEP|best
+DELETE|best
+KEEP|. <::::> as such
+DELETE|. <::::> as such
+KEEP|company
+DELETE|company
+KEEP|. <::::> the club
+DELETE|. <::::> the club
+KEEP|. <::::> it had
+DELETE|. <::::> it had
+KEEP|attended
+DELETE|attended
+KEEP|off
+DELETE|off
+KEEP|. <::::> it features
+DELETE|. <::::> it features
+KEEP|. <::::> yet
+DELETE|. <::::> yet
+KEEP|. <::::> the team
+DELETE|. <::::> the team
+KEEP|great
+DELETE|great
+KEEP|instead
+DELETE|instead
+KEEP|. <::::> these included
+DELETE|. <::::> these included
+KEEP|was the
+DELETE|was the
+KEEP|work
+DELETE|work
+KEEP|among
+DELETE|among
+KEEP|. <::::> he was a
+DELETE|. <::::> he was a
+KEEP|played competitive hurling in his youth . <::::> he
+DELETE|played competitive hurling in his youth . <::::> he
+KEEP|single
+DELETE|single
+KEEP|famous
+DELETE|famous
+KEEP|in which
+DELETE|in which
+KEEP|group
+DELETE|group
+KEEP|sometimes
+DELETE|sometimes
+KEEP|. <::::> finally
+DELETE|. <::::> finally
+KEEP|. <::::> he last played
+DELETE|. <::::> he last played
+KEEP|seven
+DELETE|seven
+KEEP|. <::::> ''
+DELETE|. <::::> ''
+KEEP|august
+DELETE|august
+KEEP|international
+DELETE|international
+KEEP|do
+DELETE|do
+KEEP|7
+DELETE|7
+KEEP|got
+DELETE|got
+KEEP|part of
+DELETE|part of
+KEEP|together
+DELETE|together
+KEEP|at the
+DELETE|at the
+KEEP|, as
+DELETE|, as
+KEEP|wrote
+DELETE|wrote
+KEEP|. <::::> the building
+DELETE|. <::::> the building
+KEEP|. <::::> since
+DELETE|. <::::> since
+KEEP|region
+DELETE|region
+KEEP|. <::::> by
+DELETE|. <::::> by
+KEEP|. <::::> the game
+DELETE|. <::::> the game
+KEEP|. <::::> it has been
+DELETE|. <::::> it has been
+KEEP|. <::::> all
+DELETE|. <::::> all
+KEEP|remained
+DELETE|remained
+KEEP|mostly
+DELETE|mostly
+KEEP|. <::::> this included
+DELETE|. <::::> this included
+KEEP|show
+DELETE|show
+KEEP|music
+DELETE|music
+KEEP|own
+DELETE|own
+KEEP|. <::::> the series
+DELETE|. <::::> the series
+KEEP|september
+DELETE|september
+KEEP|. <::::> he said
+DELETE|. <::::> he said
+KEEP|different
+DELETE|different
+KEEP|. <::::> consequently
+DELETE|. <::::> consequently
+KEEP|. <::::> that is
+DELETE|. <::::> that is
+KEEP|. <::::> now
+DELETE|. <::::> now
+KEEP|appearing
+DELETE|appearing
+KEEP|continued
+DELETE|continued
+KEEP|9
+DELETE|9
+KEEP|part
+DELETE|part
+KEEP|is the
+DELETE|is the
+KEEP|. <::::> he received
+DELETE|. <::::> he received
+KEEP|was released
+DELETE|was released
+KEEP|. <::::> in addition ,
+DELETE|. <::::> in addition ,
+KEEP|january
+DELETE|january
+KEEP|. <::::> she has
+DELETE|. <::::> she has
+KEEP|they were
+DELETE|they were
+KEEP|. <::::> he currently plays
+DELETE|. <::::> he currently plays
+KEEP|building
+DELETE|building
+KEEP|february
+DELETE|february
+KEEP|. <::::> i
+DELETE|. <::::> i
+KEEP|once
+DELETE|once
+KEEP|. <::::> as a result ,
+DELETE|. <::::> as a result ,
+KEEP|becoming
+DELETE|becoming
+KEEP|formed
+DELETE|formed
+KEEP|becomes
+DELETE|becomes
+KEEP|. <::::> at that time
+DELETE|. <::::> at that time
+KEEP|. <::::> moreover
+DELETE|. <::::> moreover
+KEEP|along with
+DELETE|along with
+KEEP|name
+DELETE|name
+KEEP|. <::::> she then
+DELETE|. <::::> she then
+KEEP|more than
+DELETE|more than
+KEEP|12
+DELETE|12
+KEEP|. <::::> afterwards
+DELETE|. <::::> afterwards
+KEEP|much
+DELETE|much
+KEEP|last
+DELETE|last
+KEEP|album
+DELETE|album
+KEEP|8
+DELETE|8
+KEEP|main
+DELETE|main
+KEEP|they are
+DELETE|they are
+KEEP|does
+DELETE|does
+KEEP|late
+DELETE|late
