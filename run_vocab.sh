@@ -1,14 +1,14 @@
-WIKISPLIT_DIR=~/data1/jiao_data
+WIKISPLIT_DIR=/data/pengwei/fourth/laser_data/wiki-split
 # Preprocessed data and models will be stored here.
-OUTPUT_DIR=~/data1/jiao_data/output
+OUTPUT_DIR=/data/pengwei/fourth/laser_data/wiki-split/output
 # Download the pretrained BERT model:
 # https://storage.googleapis.com/bert_models/2018_10_18/cased_L-12_H-768_A-12.zip
-BERT_BASE_DIR=~/pre-train/cased_L-12_H-768_A-12
+BERT_BASE_DIR=/data/pretrained_models/cased_L-12_H-768_A-12
 
 ### Optional parameters ###
 
 # If you train multiple models on the same data, change this label.
-EXPERIMENT=wikisplit_experiment_jiao
+EXPERIMENT=wikisplit_experiment
 python phrase_vocabulary_optimization.py \
   --input_file=${WIKISPLIT_DIR}/train.tsv \
   --input_format=wikisplit \

@@ -1,14 +1,14 @@
-WIKISPLIT_DIR=./data
+WIKISPLIT_DIR=/data/pengwei/fourth/laser_data/wiki-split
 # Preprocessed data and models will be stored here.
-OUTPUT_DIR=./output
+OUTPUT_DIR=/data/pengwei/fourth/laser_data/wiki-split/output
 # Download the pretrained BERT model:
 # https://storage.googleapis.com/bert_models/2018_10_18/cased_L-12_H-768_A-12.zip
-BERT_BASE_DIR=~/pre-train/cased_L-12_H-768_A-12
+BERT_BASE_DIR=/data/pretrained_models/cased_L-12_H-768_A-12
 
 ### Optional parameters ###
 
 # If you train multiple models on the same data, change this label.
-EXPERIMENT=wikisplit_experiment_filter
+EXPERIMENT=wikisplit_experiment
 # To quickly test that model training works, set the number of epochs to a
 # smaller value (e.g. 0.01).
 NUM_EPOCHS=9.0
@@ -24,7 +24,7 @@ NUM_TRAIN_EXAMPLES=$(cat "${OUTPUT_DIR}/train.tf_record.num_examples.txt")
 NUM_EVAL_EXAMPLES=$(cat "${OUTPUT_DIR}/validation.tf_record.num_examples.txt")
 CONFIG_FILE=./configs/lasertagger_config.json
 
-python run_lasertagger.py \
+CUDA_VISIBLE_DEVICES=1 python run_lasertagger.py \
   --training_file=${OUTPUT_DIR}/train.tf_record \
   --eval_file=${OUTPUT_DIR}/validation.tf_record \
   --label_map_file=${OUTPUT_DIR}/label_map.txt \

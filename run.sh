@@ -1,9 +1,9 @@
-WIKISPLIT_DIR=./data
+WIKISPLIT_DIR=/data/pengwei/fourth/laser_data/wiki-split
 # Preprocessed data and models will be stored here.
-OUTPUT_DIR=./output
+OUTPUT_DIR=/data/pengwei/fourth/laser_data/wiki-split/output
 # Download the pretrained BERT model:
 # https://storage.googleapis.com/bert_models/2018_10_18/cased_L-12_H-768_A-12.zip
-BERT_BASE_DIR=~/pre-train/cased_L-12_H-768_A-12
+BERT_BASE_DIR=/data/pretrained_models/cased_L-12_H-768_A-12
 
 ### Optional parameters ###
 
@@ -19,9 +19,9 @@ SAVE_CHECKPOINT_STEPS=500
 
 echo "preprocess_main train.tsv"
 python preprocess_main.py \
-    --input_file=${WIKISPLIT_DIR}/validation.tsv \
+    --input_file=${WIKISPLIT_DIR}/train.tsv \
     --input_format=wikisplit \
-    --output_tfrecord=${OUTPUT_DIR}/validation.tf_record \
+    --output_tfrecord=${OUTPUT_DIR}/train.tf_record \
     --label_map_file=${OUTPUT_DIR}/label_map.txt \
     --vocab_file=${BERT_BASE_DIR}/vocab.txt \
     --output_arbitrary_targets_for_infeasible_examples=false
