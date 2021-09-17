@@ -27,7 +27,7 @@ from __future__ import print_function
 
 import tagging
 import utils
-
+import numpy as np
 from typing import Iterable, Mapping, Sequence, Set, Text, Tuple
 
 
@@ -43,6 +43,7 @@ class TaggingConverter(object):
     """
     self._phrase_vocabulary = set(
         phrase.lower() for phrase in phrase_vocabulary)
+    self._percentile = np.percentile(([len(phrase.split(' ')) for phrase in self._phrase_vocabulary]), 95)
     self._do_swap = do_swap
     # Maximum number of tokens in an added phrase (inferred from the
     # vocabulary).
@@ -186,6 +187,39 @@ class TaggingConverter(object):
       if tags[idx - 1].tag_type != tagging.TagType.DELETE:
         return idx
     return 0
+
+  def transtoadd(self, tags):
+    tags_only, add_mask, add_index, phrase = [], [], [], []
+    flag = 0
+    nums_add = 0
+    tags = [str(tag) for tag in tags]
+    for i in range(len(tags)):
+      if flag:
+        tags_only.append('ADD')
+        phrase.append(added_phrase)
+        add_mask.append(1)
+        add_index.append(i)
+        nums_add += 1
+        flag = 0
+        continue
+      if "|" in tags[i]:
+        tag, added_phrase = tags[i].split("|")
+        if tag == 'KEEP':
+          tags_only.append('ADD')
+          phrase.append(added_phrase)
+          add_mask.append(1)
+          add_index.append(i)
+          nums_add += 1
+        elif tag == 'DELETE':
+          tags_only.append('DELETE')
+          phrase.append('[SEP]')
+          flag = 1
+          add_mask.append(0)
+      else:
+        tags_only.append(tags[i])
+        phrase.append('[SEP]')
+        add_mask.append(0)
+    return tags_only, add_mask, add_index, phrase, nums_add
 
 
 def get_phrase_vocabulary_from_label_map(

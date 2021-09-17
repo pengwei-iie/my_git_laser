@@ -183,12 +183,17 @@ def _added_token_counts(data_iterator, try_swapping, max_input_examples=10000):
   phrase_counter = collections.Counter()
   num_examples = 0
   all_added_phrases = []
+  datasets = []
   for sources, target in data_iterator:
+    dict = {}
+    dict['sens'] = sources
+    dict['targets'] = target
     if num_examples >= max_input_examples:
       break
     logging.log_every_n(logging.INFO, f'{num_examples} examples processed.',
                         1000)
     added_phrases = _get_added_phrases(' '.join(sources), target)
+    dict['added_phrases'] = added_phrases
     if try_swapping and len(sources) == 2:
       added_phrases_swap = _get_added_phrases(' '.join(sources[::-1]), target)
       # If we can align more and have to add less after swapping, we assume that
@@ -199,8 +204,9 @@ def _added_token_counts(data_iterator, try_swapping, max_input_examples=10000):
       phrase_counter[phrase] += 1
     all_added_phrases.append(added_phrases)
     num_examples += 1
+
   logging.info(f'{num_examples} examples processed.\n')
-  return phrase_counter, all_added_phrases
+  return phrase_counter, all_added_phrases, dict
 
 
 def _construct_added_phrases_matrix(all_added_phrases, phrase_counter):
@@ -255,7 +261,7 @@ def main(argv):
 
   data_iterator = utils.yield_sources_and_targets(FLAGS.input_file,
                                                   FLAGS.input_format)
-  phrase_counter, all_added_phrases = _added_token_counts(
+  phrase_counter, all_added_phrases, dict = _added_token_counts(
       data_iterator, FLAGS.enable_swap_tag, FLAGS.max_input_examples)
   matrix = _construct_added_phrases_matrix(all_added_phrases, phrase_counter)
   num_examples = len(all_added_phrases)

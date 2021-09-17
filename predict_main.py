@@ -50,6 +50,7 @@ flags.DEFINE_string(
     'line.')
 flags.DEFINE_string('vocab_file', None, 'Path to the BERT vocabulary file.')
 flags.DEFINE_integer('max_seq_length', 128, 'Maximum sequence length.')
+flags.DEFINE_integer('max_tgt_length', 14, 'Maximum sequence length.')
 flags.DEFINE_bool(
     'do_lower_case', False,
     'Whether to lower case the input text. Should be True for uncased '
@@ -73,7 +74,7 @@ def main(argv):
       tagging_converter.get_phrase_vocabulary_from_label_map(label_map),
       FLAGS.enable_swap_tag)
   builder = bert_example.BertExampleBuilder(label_map, FLAGS.vocab_file,
-                                            FLAGS.max_seq_length,
+                                            FLAGS.max_seq_length, FLAGS.max_tgt_length,
                                             FLAGS.do_lower_case, converter)
   predictor = predict_utils.LaserTaggerPredictor(
       tf.contrib.predictor.from_saved_model(FLAGS.saved_model), builder,

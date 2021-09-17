@@ -33,7 +33,7 @@ from absl import logging
 import bert_example
 import tagging_converter
 import utils
-
+import torch
 import tensorflow as tf
 
 FLAGS = flags.FLAGS
@@ -53,7 +53,9 @@ flags.DEFINE_string(
     'maps each possible tag to an ID, or a text file that has one tag per '
     'line.')
 flags.DEFINE_string('vocab_file', None, 'Path to the BERT vocabulary file.')
+flags.DEFINE_string('cache_examples_file', None, 'Path to save the features file.')
 flags.DEFINE_integer('max_seq_length', 128, 'Maximum sequence length.')
+flags.DEFINE_integer('max_tgt_length', 36, 'Maximum sequence length.')
 flags.DEFINE_bool(
     'do_lower_case', False,
     'Whether to lower case the input text. Should be True for uncased '
@@ -102,13 +104,14 @@ def main(argv):
       tagging_converter.get_phrase_vocabulary_from_label_map(label_map),
       FLAGS.enable_swap_tag)
   builder = bert_example.BertExampleBuilder(label_map, FLAGS.vocab_file,
-                                            FLAGS.max_seq_length,
+                                            FLAGS.max_seq_length, FLAGS.max_tgt_length,
                                             FLAGS.do_lower_case, converter)
 
   num_converted = 0
   with tf.io.TFRecordWriter(FLAGS.output_tfrecord) as writer:
     sources_list = []
     tgts_list = []
+    examples = []
     for i, (sources, target) in enumerate(utils.yield_sources_and_targets(
         FLAGS.input_file, FLAGS.input_format)):
       logging.log_every_n(
@@ -124,8 +127,10 @@ def main(argv):
           tgts_list.append(target)
       if example is None:
         continue
-      writer.write(example.to_tf_example().SerializeToString())
+      examples.append(example)
+      # writer.write(example.to_tf_example().SerializeToString())
       num_converted += 1
+  torch.save(examples, FLAGS.cache_examples_file)
   logging.info(f'Done. {num_converted} examples converted to tf.Example.')
   count_fname = _write_example_count(num_converted)
   logging.info(f'Wrote:\n{FLAGS.output_tfrecord}\n{count_fname}')

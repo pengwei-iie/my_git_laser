@@ -41,6 +41,7 @@ class TagType(Enum):
   # applied if there are two source texts and the tag is applied to the last
   # token of the first source. In other contexts, it's treated as KEEP.
   SWAP = 3
+  ADD = 4
 
 
 class Tag(object):
