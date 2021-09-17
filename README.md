@@ -222,3 +222,20 @@ results are possible. However, we've verified that we get the similar results on
 the WikiSplit dataset.
 
 This is not an official Google product.
+
+
+## Debug
+
+vocab
+```angular2
+python phrase_vocabulary_optimization.py --input_file=/data/pengwei/fourth/laser_data/wiki-split/train.tsv --input_format=wikisplit --vocabulary_size=500 --max_input_examples=1000000 --output_file=/data/pengwei/fourth/laser_data/wiki-split/output/label_map.txt
+```
+preprocess
+```angular2
+python preprocess_main.py --input_file=/data/pengwei/fourth/laser_data/wiki-split/tune.tsv --input_format=wikisplit --output_tfrecord=/data/pengwei/fourth/laser_data/wiki-split/output/tune.tf_record --label_map_file=/data/pengwei/fourth/laser_data/wiki-split/output/label_map.txt --vocab_file=${BERT_BASE_DIR}/vocab.txt --output_arbitrary_targets_for_infeasible_examples=true
+```
+
+train
+```
+CUDA_VISIBLE_DEVICES=1 python run_lasertagger.py --training_file=/data/pengwei/fourth/laser_data/wiki-split/output/train.tf_record --eval_file=/data/pengwei/fourth/laser_data/wiki-split/output/validation.tf_record --label_map_file=/data/pengwei/fourth/laser_data/wiki-split/output/label_map.txt --model_config_file=./configs/lasertagger_config.json --output_dir=/data/pengwei/fourth/laser_data/wiki-split/output/models/wikisplit_experiment --init_checkpoint=/data/pretrained_models/cased_L-12_H-768_A-12/bert_model.ckpt --do_train=true --do_eval=true --train_batch_size=32 --save_checkpoints_steps=500 --num_train_epochs=9 --num_train_examples=1574 --num_eval_examples=1574
+```
