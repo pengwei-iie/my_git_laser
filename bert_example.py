@@ -21,11 +21,12 @@ from __future__ import division
 from __future__ import print_function
 
 import collections
-
+import numpy as np
 from bert import tokenization
 import tagging
 import tagging_converter
 import tensorflow as tf
+import copy
 from typing import Mapping, MutableSequence, Optional, Sequence, Text
 
 
@@ -43,7 +44,7 @@ class BertExample(object):
                segment_ids, labels,
                labels_mask,
                token_start_indices,
-               task, default_label, add_mask, add_index, phrase_ids, nums_add):
+               task, default_label, add_mask, add_index, dec_inputs, dec_targets, nums_add):
     input_len = len(input_ids)
     if not (input_len == len(input_mask) and input_len == len(segment_ids) and
             input_len == len(labels) and input_len == len(labels_mask)):
@@ -59,7 +60,8 @@ class BertExample(object):
         ('labels_mask', labels_mask),
         ('add_mask', add_mask),
         ('add_index', add_index),
-        ('phrase_ids', phrase_ids),
+        ('dec_inputs', dec_inputs),
+        ('dec_targets', dec_targets),
         ('nums_add', nums_add)
     ])
     self._token_start_indices = token_start_indices
@@ -79,10 +81,15 @@ class BertExample(object):
       if key in ['add_index', 'nums_add']:
         continue
       pad_id = pad_token_id if key == 'input_ids' else 0
-      if key == 'phrase_ids':
-        for index in add_index:
-          pad_tgt = max_tgt_length - len(self.features[key][index])
-          self.features[key][index].extend([pad_id] * pad_tgt)
+      if key == 'dec_inputs' or key == 'dec_targets':
+        # for index in add_index:
+        #   pad_tgt = max_tgt_length - len(self.features[key][index])
+        #   self.features[key][index].extend([pad_id] * pad_tgt)
+        for _ in range(pad_len):
+          self.features[key].append([pad_id])
+        for i in range(len(self.features[key])):
+          pad_tgt = max_tgt_length - len(self.features[key][i])
+          self.features[key][i].extend([pad_id] * pad_tgt)
       else:
         self.features[key].extend([pad_id] * pad_len)
         if len(self.features[key]) != max_seq_length:
@@ -139,7 +146,7 @@ class BertExampleBuilder(object):
     self._converter = converter
     self._pad_id = self._get_pad_id()
     self._keep_tag_id = self._label_map['KEEP']
-    self._tags_only = {"KEEP": 0, "ADD": 1, "DELETE": 2, "SWAP": 3}
+    self._tags_only = {"KEEP": 1, "ADD": 4, "DELETE": 2, "SWAP": 3}
 
   def build_bert_example(
       self,
@@ -191,26 +198,35 @@ class BertExampleBuilder(object):
     labels = self._truncate_list(labels)
     add_mask = self._truncate_list(bert_add_mask)
 
-    # 对phrase加bos
+    # 对phrase加bos, 同时dec_inputs and dec_targets
+    dec_inputs = copy.deepcopy(bert_phrase)
+    dec_targets = copy.deepcopy(bert_phrase)
     for i in range(len(bert_phrase)):
-      if bert_phrase[i][0] != '[SEP]':
-        bert_phrase[i].insert(0, '[BOS]')
-        bert_phrase[i].append('[SEP]')
+      if bert_phrase[i][0] != '[PAD]':
+        dec_inputs[i].insert(0, '[BOS]')
+        dec_targets[i].append('[SEP]')
     input_tokens = ['[CLS]'] + tokens + ['[SEP]']
-    tmp_list = ['[SEP]']
-    bert_phrase.insert(0, tmp_list)
-    bert_phrase.append(tmp_list)
+    tmp_list = ['[PAD]']
+    dec_inputs.insert(0, tmp_list)
+    dec_inputs.append(tmp_list)
+    dec_targets.insert(0, tmp_list)
+    dec_targets.append(tmp_list)
     labels_mask = [0] + [1] * len(labels) + [0]
     labels = [0] + labels + [0]
     add_mask = [0] + add_mask + [0]
-    # 在之前处理的时候已经加过了
-    # phrase = ['[SEP]'] + bert_phrase + ['[SEP]']
+    # obtain add_index from add_mask
+    add_index = []
+    for i in range(len(add_mask)):
+      if add_mask[i] == 1:
+        add_index.append(i)
 
     input_ids = self._tokenizer.convert_tokens_to_ids(input_tokens)
     input_mask = [1] * len(input_ids)
     segment_ids = [0] * len(input_ids)
     # phrase_ids = self._tokenizer.convert_tokens_to_ids(phrase)
-    phrase_ids = [self._tokenizer.convert_tokens_to_ids(phrase) for phrase in bert_phrase]
+    dec_inputs = [self._tokenizer.convert_tokens_to_ids(phrase) for phrase in dec_inputs]
+    dec_targets = [self._tokenizer.convert_tokens_to_ids(phrase) for phrase in dec_targets]
+
     example = BertExample(
         input_ids=input_ids,
         input_mask=input_mask,
@@ -222,10 +238,11 @@ class BertExampleBuilder(object):
         default_label=self._keep_tag_id,
         add_mask=add_mask,
         add_index=add_index,
-        phrase_ids=phrase_ids,
+        dec_inputs=dec_inputs,
+        dec_targets=dec_targets,
         nums_add=nums_add)
     example.pad_to_max_length(self._max_seq_length, self._max_tgt_length, self._pad_id, add_index)
-    return example, flag
+    return example, flag, task
 
   def _split_to_wordpieces(self, tokens, labels):
     """Splits tokens (and the labels accordingly) to WordPieces.
@@ -276,7 +293,7 @@ class BertExampleBuilder(object):
       bert_add_mask.extend([add_mask[i]] * len(pieces))
       bert_phrase.extend([phrase[i]] * len(pieces))
     for i in range(len(bert_phrase)):
-      if bert_phrase[i] != '[SEP]':
+      if bert_phrase[i] != '[PAD]':
         bert_phrase[i] = self._tokenizer.tokenize(bert_phrase[i])
       else:
         bert_phrase[i] = [bert_phrase[i]]

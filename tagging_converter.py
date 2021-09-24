@@ -196,6 +196,8 @@ class TaggingConverter(object):
     for i in range(len(tags)):
       if flag:
         tags_only.append('ADD')
+        if '<::::>' in added_phrase:
+          added_phrase.replace('<::::>', '[SPI]')
         phrase.append(added_phrase)
         add_mask.append(1)
         add_index.append(i)
@@ -206,18 +208,20 @@ class TaggingConverter(object):
         tag, added_phrase = tags[i].split("|")
         if tag == 'KEEP':
           tags_only.append('ADD')
+          if '<::::>' in added_phrase:
+            added_phrase = added_phrase.replace('<::::>', '[SPI]')
           phrase.append(added_phrase)
           add_mask.append(1)
           add_index.append(i)
           nums_add += 1
         elif tag == 'DELETE':
           tags_only.append('DELETE')
-          phrase.append('[SEP]')
+          phrase.append('[PAD]')
           flag = 1
           add_mask.append(0)
       else:
         tags_only.append(tags[i])
-        phrase.append('[SEP]')
+        phrase.append('[PAD]')
         add_mask.append(0)
     return tags_only, add_mask, add_index, phrase, nums_add
 

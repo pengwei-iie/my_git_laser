@@ -29,7 +29,7 @@ from typing import Text
 from absl import app
 from absl import flags
 from absl import logging
-
+import json
 import bert_example
 import tagging_converter
 import utils
@@ -54,6 +54,7 @@ flags.DEFINE_string(
     'line.')
 flags.DEFINE_string('vocab_file', None, 'Path to the BERT vocabulary file.')
 flags.DEFINE_string('cache_examples_file', None, 'Path to save the features file.')
+flags.DEFINE_string('saved_data_path', None, 'Path to save the features file.')
 flags.DEFINE_integer('max_seq_length', 128, 'Maximum sequence length.')
 flags.DEFINE_integer('max_tgt_length', 36, 'Maximum sequence length.')
 flags.DEFINE_bool(
@@ -109,8 +110,8 @@ def main(argv):
 
   num_converted = 0
   with tf.io.TFRecordWriter(FLAGS.output_tfrecord) as writer:
-    sources_list = []
-    tgts_list = []
+    # sources_list = []
+    # tgts_list = []
     examples = []
     for i, (sources, target) in enumerate(utils.yield_sources_and_targets(
         FLAGS.input_file, FLAGS.input_format)):
@@ -118,31 +119,53 @@ def main(argv):
           logging.INFO,
           f'{i} examples processed, {num_converted} converted to tf.Example.',
           10000)
-      example, flag = builder.build_bert_example(
+      example, flag, task = builder.build_bert_example(
           sources, target,
           FLAGS.output_arbitrary_targets_for_infeasible_examples)
       # add new dataset
-      if flag:
-          sources_list.append(sources[0])
-          tgts_list.append(target)
+      # if flag:
+      #     sources_list.append(sources[0])
+      #     tgts_list.append(target)
       if example is None:
         continue
+      answer_len = []
+      for phrase in example.features["dec_inputs"]:
+          answer_len.append(sum(list(i != 0 for i in phrase)))
+      example = {
+        "input_ids": example.features["input_ids"],
+        "input_mask": example.features["input_mask"],
+        "segment_ids": example.features["segment_ids"],
+        "labels": example.features["labels"],
+        "labels_mask": example.features["labels_mask"],
+        # "token_start_indices": example.features["token_start_indices"],
+        # "task": task,
+        # "default_label": 0,
+        "add_mask": example.features["add_mask"],
+        "add_index": example.features["add_index"],
+        "dec_inputs": example.features["dec_inputs"],
+        "dec_targets": example.features["dec_targets"],
+        "answer_len": answer_len,
+        "nums_add": example.features["nums_add"]
+      }
       examples.append(example)
       # writer.write(example.to_tf_example().SerializeToString())
       num_converted += 1
-  torch.save(examples, FLAGS.cache_examples_file)
+  with open(FLAGS.saved_data_path, 'w', encoding="utf-8") as fout:
+      for example in examples:
+          fout.write(json.dumps(example, ensure_ascii=False) + '\n')
+  # torch.save(examples, FLAGS.cache_examples_file)
   logging.info(f'Done. {num_converted} examples converted to tf.Example.')
   count_fname = _write_example_count(num_converted)
   logging.info(f'Wrote:\n{FLAGS.output_tfrecord}\n{count_fname}')
   # save filter data to src and tgt
-  with open(src_file, 'w', encoding='utf-8') as outfile:
-      for i in sources_list:
-          outfile.write(i)
-          outfile.write('\n')
-  with open(tgt_file, 'w', encoding='utf-8') as outfile:
-      for i in tgts_list:
-          outfile.write(i)
-          outfile.write('\n')
+  # with open(src_file, 'w', encoding='utf-8') as outfile:
+  #     for i in sources_list:
+  #         outfile.write(i)
+  #         outfile.write('\n')
+  # with open(tgt_file, 'w', encoding='utf-8') as outfile:
+  #     for i in tgts_list:
+  #         outfile.write(i)
+  #         outfile.write('\n')
 
 
 if __name__ == '__main__':

@@ -230,6 +230,8 @@ class BasicTokenizer(object):
 
   def _run_split_on_punc(self, text):
     """Splits punctuation on a piece of text."""
+    if text == '[spi]':
+      return ['[spi]']
     chars = list(text)
     i = 0
     start_new_word = True
@@ -327,6 +329,8 @@ class WordpieceTokenizer(object):
 
     output_tokens = []
     for token in whitespace_tokenize(text):
+      if token == '[spi]':
+        return [token]
       chars = list(token)
       if len(chars) > self.max_input_chars_per_word:
         output_tokens.append(self.unk_token)
